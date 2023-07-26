@@ -39,4 +39,7 @@ public class Patient {
     private Boolean deleted = false;
     @Column
     private Boolean immunized = false;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "health_record_id", referencedColumnName = "id")
+    private HealthRecord healthRecord;
 }
