@@ -45,4 +45,6 @@ public class Patient {
     private HealthRecord healthRecord;
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
     private List<ScheduledTesting> scheduledTestings;
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    private List<Testing> testings;
 }

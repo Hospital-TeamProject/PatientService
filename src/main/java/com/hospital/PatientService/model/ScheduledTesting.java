@@ -23,4 +23,7 @@ public class ScheduledTesting {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "patient_id", referencedColumnName = "id", nullable = false)
     private Patient patient;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "testing_id", referencedColumnName = "id")
+    private Testing testing;
 }

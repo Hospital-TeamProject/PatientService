@@ -1,6 +1,5 @@
 package com.hospital.PatientService.model;
 
-import com.hospital.PatientService.model.Patient;
 import com.hospital.PatientService.model.enums.healthrecord.BloodType;
 import com.hospital.PatientService.model.enums.healthrecord.RHFactor;
 import jakarta.persistence.*;
