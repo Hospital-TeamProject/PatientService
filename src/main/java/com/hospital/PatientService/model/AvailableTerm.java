@@ -29,4 +29,28 @@ public class AvailableTerm {
     private Integer availableTermsNum = 0;
     @OneToMany(mappedBy = "availableTerm", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<ScheduledTesting> scheduledTestings;
+
+    public void incrementAvailableNurseNum() {
+        this.availableNursesNum++;
+    }
+
+    public void decrementAvailableNurseNum() {
+        this.availableNursesNum--;
+    }
+
+    public void incrementAvailableTermsNum() {
+        this.availableTermsNum++;
+    }
+
+    public void decrementAvailableTermsNum() {
+        this.availableTermsNum--;
+    }
+
+    public void addScheduledTesting(ScheduledTesting scheduledTesting) {
+        this.scheduledTestings.add(scheduledTesting);
+    }
+
+    public void removeScheduledTesting(ScheduledTesting scheduledTesting) {
+        this.scheduledTestings.remove(scheduledTesting);
+    }
 }
