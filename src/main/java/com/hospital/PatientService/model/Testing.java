@@ -23,7 +23,7 @@ public class Testing {
     private String reason;
     @Column(nullable = false)
     private Boolean isDeleted;
-    @OneToOne(mappedBy = "testings")
+    @OneToOne(mappedBy = "testing")
     private ScheduledTesting scheduledTesting;
     @ManyToOne
     @JoinColumn(name = "patient_id", referencedColumnName = "id",nullable = false)

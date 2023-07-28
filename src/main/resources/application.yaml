@@ -4,7 +4,7 @@ logging:
 spring:
   datasource:
     username: root
-    url: jdbc:mysql://localhost:3306/user_db
+    url: jdbc:mysql://localhost:3306/patient_db
     password: root
   jpa:
     properties:
