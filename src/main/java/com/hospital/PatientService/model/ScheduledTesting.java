@@ -1,5 +1,7 @@
 package com.hospital.PatientService.model;
 
+import com.hospital.PatientService.model.enums.examination.ExaminationStatus;
+import com.hospital.PatientService.model.enums.examination.PatientArrivalStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +20,12 @@ public class ScheduledTesting {
     private LocalDateTime dateAndTime;
     @Column(nullable = false)
     private UUID schedulerId;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private ExaminationStatus examinationStatus = ExaminationStatus.SCHEDULED;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private PatientArrivalStatus patientArrivalStatus = PatientArrivalStatus.DID_NOT_SHOW_UP;
     @Column
     private String note;
     @ManyToOne(fetch = FetchType.EAGER)
