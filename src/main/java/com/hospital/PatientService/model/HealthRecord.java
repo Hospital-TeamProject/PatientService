@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -27,4 +28,6 @@ public class HealthRecord {
     private Boolean isDeleted = false;
     @OneToOne(mappedBy = "healthRecord", fetch = FetchType.LAZY)
     private Patient patient;
+    @OneToMany(mappedBy = "healthRecord", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Allergy> allergies;
 }
