@@ -1,5 +1,6 @@
 package com.hospital.PatientService.model;
 
+import com.hospital.PatientService.model.enums.testing.Availability;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,6 +18,9 @@ public class AvailableTerm {
     private Long id;
     @Column(nullable = false)
     private LocalDateTime dateAndTime;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Availability availability = Availability.CAN_MAKE_AN_APPOINTMENT;
     @Column(nullable = false)
     private UUID departmentId;
     @Column(nullable = false)
