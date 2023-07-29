@@ -19,6 +19,6 @@ public class Diagnosis {
     private String code;
     @Column
     private String description;
-    @OneToMany(mappedBy = "healthRecord", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "diagnosis", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<MedicalExamination> medicalExaminations;
 }
