@@ -32,4 +32,6 @@ public class HealthRecord {
     private List<Allergy> allergies;
     @OneToMany(mappedBy = "healthRecord", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Operation> operations;
+    @OneToMany(mappedBy = "healthRecord", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<MedicalExamination> medicalExaminations;
 }
