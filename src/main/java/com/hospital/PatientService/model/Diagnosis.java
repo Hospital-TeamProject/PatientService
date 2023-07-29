@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -18,5 +20,5 @@ public class Diagnosis {
     @Column
     private String description;
     @OneToMany(mappedBy = "healthRecord", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private MedicalExamination medicalExamination;
+    private List<MedicalExamination> medicalExaminations;
 }
