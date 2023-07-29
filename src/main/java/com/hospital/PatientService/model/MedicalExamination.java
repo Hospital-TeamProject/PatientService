@@ -26,6 +26,9 @@ public class MedicalExamination {
     private Boolean deleted = false;
     @Column(nullable = false)
     private UUID userID;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "diagnosis_id",nullable = false)
+    private Diagnosis diagnosis;
     @ManyToOne
     @JsonIgnore
     @JoinColumn(name = "health_record_id", nullable = false)
