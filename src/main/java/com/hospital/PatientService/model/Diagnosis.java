@@ -21,4 +21,7 @@ public class Diagnosis {
     private String description;
     @OneToMany(mappedBy = "diagnosis", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<MedicalExamination> medicalExaminations;
+    @OneToMany(mappedBy = "diagnosis", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<MedicalHistory> medicalHistories;
+
 }
