@@ -28,4 +28,7 @@ public class Testing {
     @ManyToOne
     @JoinColumn(name = "patient_id", referencedColumnName = "id",nullable = false)
     private Patient patient;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "patient_condition_id", referencedColumnName = "id", nullable = false)
+    private PatientCondition patientCondition;
 }
