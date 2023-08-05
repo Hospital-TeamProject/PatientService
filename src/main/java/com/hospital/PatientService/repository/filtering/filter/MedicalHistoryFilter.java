@@ -1,4 +1,4 @@
-package com.hospital.PatientService.repository.filter;
+package com.hospital.PatientService.repository.filtering.filter;
 
 import com.hospital.PatientService.model.HealthRecord;
 import lombok.AllArgsConstructor;
