@@ -34,6 +34,6 @@ public class DischargeSpecification implements Specification<DischargeList> {
             if(dischargeFilter.getDateTo() != null){
                 predicates.add(criteriaBuilder.lessThanOrEqualTo(date, dischargeFilter.getDateTo()));
             }
-        return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
+        return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
     }
 }
