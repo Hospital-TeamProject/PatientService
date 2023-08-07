@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Getter
 @AllArgsConstructor
-public class MedicalRecordFilter {
+public class MedicalReportFilter {
     private UUID patientId;
     private Date dateFrom;
     private Date dateTo;
