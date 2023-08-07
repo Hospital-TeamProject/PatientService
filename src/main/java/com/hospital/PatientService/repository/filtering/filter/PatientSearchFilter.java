@@ -12,5 +12,5 @@ public class PatientSearchFilter {
     private String firstName;
     private String lastName;
     private String jmbg;
-    private Boolean isDeleted;
+    private Boolean includeDeleted;
 }
