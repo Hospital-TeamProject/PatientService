@@ -27,6 +27,6 @@ public class MedicalExaminationSpecification implements Specification<MedicalExa
         if(medicalExaminationFilter.getStartDate() != null) {
             predicates.add(criteriaBuilder.between(date, medicalExaminationFilter.getStartDate(), medicalExaminationFilter.getEndDate()));
         }
-        return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
+        return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
     }
 }

@@ -32,6 +32,6 @@ public class AppointmentSpecification implements Specification<Appointment> {
             Date endDate = DateUtils.addDays(startDate, 1);
             predicates.add(criteriaBuilder.between(appointmentDate, startDate, endDate));
         }
-        return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
+        return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
     }
 }

@@ -30,6 +30,6 @@ public class MedicalHistorySpecification implements Specification<MedicalHistory
             predicates.add(criteriaBuilder.equal(diagnosisCode, medicalHistoryFilter.getDiagnosisCode()));
         }
 
-        return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
+        return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
     }
 }
