@@ -10,5 +10,6 @@ import java.util.UUID;
 @AllArgsConstructor
 public class ScheduledMedExaminationFilter {
     private UUID employeeId;
-    private Date appointmentDate;
+    private Date startDate;
+    private Date endDate;
 }
