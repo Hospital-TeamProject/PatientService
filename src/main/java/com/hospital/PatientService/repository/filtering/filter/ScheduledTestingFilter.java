@@ -10,5 +10,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class ScheduledTestingFilter {
     private Patient patient;
-    private LocalDateTime date;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
 }
