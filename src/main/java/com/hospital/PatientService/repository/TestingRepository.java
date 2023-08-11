@@ -14,6 +14,7 @@ import java.util.UUID;
 public interface TestingRepository extends JpaRepository<Testing, Long> {
     Page<Testing> findTestingByTestResult(TestResult testResult, Pageable pageable);
 
+
     @Query(value = "select t from Testing t where t.patient.patientId = :patientId")
     List<Testing> findByPatientId(@Param("patientId") UUID patientId);
 
