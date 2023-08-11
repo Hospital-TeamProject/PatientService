@@ -18,14 +18,14 @@ public interface ScheduledMedExaminationRepository extends JpaRepository<Schedul
     @Query(value = "select s from ScheduledMedExamination s where s.doctorId = :doctorId " +
             "and s.appointmentDate>=:startDate and s.appointmentDate<=:endDate")
     Optional<List<ScheduledMedExamination>> findSchedMedExamByDoctorIdAndBetweenGivenDates(@Param("doctorId") UUID doctorID,
-                                                                                           @Param("appointmentDate") Date startDate,
+                                                                                           @Param("startDate") Date startDate,
                                                                                            @Param("endDate") Date endDate);
 
 
     @Query(value = "select s from ScheduledMedExamination s where s.patient = :patient" +
             " and s.appointmentDate>=:startDate and s.appointmentDate<=:endDate")
     Optional<List<ScheduledMedExamination>> findSchedMedExamByPatientAndBetweenGivenDates(@Param("patient") Patient patient,
-                                                                                           @Param("appointmentDate") Date startDate,
+                                                                                           @Param("startDate") Date startDate,
                                                                                            @Param("endDate") Date endDate);
 
 }
