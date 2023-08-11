@@ -14,5 +14,5 @@ public interface AllergyRepository extends JpaRepository<Allergy, Long> {
     Page<Allergy> findByHealthRecord(HealthRecord healthRecord, Pageable pageable);
     @Modifying
     @Query("update Allergy a set a.isDeleted = true where a.healthRecord=:healthRecord")
-    Integer deleteAllergyWithMatchingHeartRecord(@Param("healthRecordId") HealthRecord healthRecord);
+    Integer deleteAllergyWithMatchingHeartRecord(@Param("healthRecord") HealthRecord healthRecord);
 }

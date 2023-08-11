@@ -12,5 +12,5 @@ public interface MedicalExaminationRepository extends JpaRepository<MedicalExami
 
     @Modifying
     @Query("update MedicalExamination m set m.deleted=true where m.healthRecord=:healthRecord")
-    Integer updateDeletedAttributeByHealthRecord(@Param("healthRecordId") HealthRecord healthRecord);
+    Integer updateDeletedAttributeByHealthRecord(@Param("healthRecord") HealthRecord healthRecord);
 }

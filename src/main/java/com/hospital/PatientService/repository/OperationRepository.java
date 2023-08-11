@@ -13,5 +13,5 @@ public interface OperationRepository extends JpaRepository<Operation, Long> {
     Page<Operation> findByHealthRecord(HealthRecord healthRecord, Pageable pageable);
     @Modifying
     @Query("update Operation o set o.isDeleted=true where o.healthRecord=:healthRecord")
-    Integer updateDeletedAttributeByHealthRecord(@Param("healthRecordId") HealthRecord healthRecord);
+    Integer updateDeletedAttributeByHealthRecord(@Param("healthRecord") HealthRecord healthRecord);
 }
